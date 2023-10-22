@@ -1,0 +1,2 @@
+1. Tạo các mảng lưu thông tin loại sản phẩm( ID_LSP, Tên loại ), sanpham( ID_SP, Tên sản phẩm, số lượng, đã bán, tồn kho)
+ Cho biết  sản phẩm nào bán chạy nhất

@@ -1,0 +1,3 @@
+1. Tạo các mảng lưu thông tin loáianpham( ID_LSP, Tên loại ) sanpham( ID_SP, Tên sản phẩm, số lượng, đã bán, tồn kho, ID_LSP)
+ Cho biết  sản phẩm nào bán chạy nhất, số lượng của sản phẩm đó trong khó.
+ 2.  Tạo file mới có thể lưu các sanpham( ID_SP, Tên sản phẩm, số lượng, đã bán, tồn kho, ID_LSP)

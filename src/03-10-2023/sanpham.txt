@@ -1,0 +1,6 @@
+1	tao	14	100	1	
+2	coca	120	210	3	
+3	pepsi	11	100	3	
+4	banh trung thu	44	100	2	
+5	banh tao	74	100	2	
+6	cam	94	100	1	
