@@ -1,0 +1,17 @@
+.header{
+  margin: 20px;
+}
+
+
+.notChange{
+  border: none;
+  cursor: default;
+}
+
+.notChange:focus{
+    outline: none;
+}
+
+main{
+  padding: 20px;
+}
