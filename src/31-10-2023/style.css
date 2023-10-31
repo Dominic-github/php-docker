@@ -1,0 +1,32 @@
+.header {
+  margin: 20px;
+}
+
+.notChange {
+  border: none;
+  cursor: default;
+}
+
+.notChange:focus {
+  outline: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.logout {
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-actions {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
