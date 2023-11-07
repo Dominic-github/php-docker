@@ -45,6 +45,7 @@ if (isset($_POST['login']))
     //Lưu tên đăng nhập
     $_SESSION['username'] = $username;
     $_SESSION['role_id'] = $row[3];
+    
     echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công. <a href='admin.php'>Về trang chủ</a>";
     die();
 }
