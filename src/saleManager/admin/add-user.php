@@ -1,5 +1,5 @@
 <?php
-ob_start();
+session_start();
 include('includes/header.php');
 include('../middleware/adminMiddleware.php');
 ?>
@@ -40,7 +40,7 @@ include('../middleware/adminMiddleware.php');
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Full Name</label>
-            <input type="text" name="fullname" class="form-control" placeholder="Enter fullname">
+            <input type="text" name="full_name" class="form-control" placeholder="Enter fullname">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>

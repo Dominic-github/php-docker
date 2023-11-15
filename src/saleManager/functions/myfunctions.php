@@ -7,4 +7,8 @@ function redirect($url, $message, $status){
   exit;
 }
 
+function formatNumber($value){
+  return number_format((float)$value, 2, '.', ''); 
+}
+
 ?>

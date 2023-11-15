@@ -1,5 +1,5 @@
 <?php
-ob_start();
+session_start();
 include('includes/header.php');
 include('../middleware/adminMiddleware.php');
 
@@ -82,7 +82,7 @@ if(isset($_POST['search'])){
                                   <div class="modal-body">
                                   <div class="form-group">
                                       <label for="">Name Product</label>
-                                      <input type="text" name='name_product' class="form-control" value="<?=$row["product_name"]?>" placeholder="Enter name product">
+                                      <input type="text" name='product_name' class="form-control" value="<?=$row["product_name"]?>" placeholder="Enter name product">
                                     </div>
                                         <div class="form-group">
                                       <label for="">Description</label>
@@ -136,7 +136,6 @@ if(isset($_POST['search'])){
               
               <?php } ?>
               <tr>
-                <td></td>
               </tr>
             </tbody>
           </thead>

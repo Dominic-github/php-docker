@@ -1,7 +1,7 @@
 <?php
-ob_start();
-include('includes/header.php');
+session_start();
 include('../middleware/adminMiddleware.php');
+include('includes/header.php');
 ?>
 
 <div class="container">

@@ -1,4 +1,5 @@
 <?php
-include('user-list.php');
+  ob_start();
+  include('user-list.php');
 ?>
 

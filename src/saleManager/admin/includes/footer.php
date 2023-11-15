@@ -36,11 +36,11 @@
  alertify.set('notifier','position', 'top-right');
 
  if("<?= $_SESSION['status']; ?>" == "success"){
-   alertify.success("<?= $_SESSION['status']; ?>");
+   alertify.success("<?= $_SESSION['message']; ?>");
  }else if ("<?= $_SESSION['status']; ?>" == "warning"){
-    alertify.warning("<?= $_SESSION['status']; ?>");
+    alertify.warning("<?= $_SESSION['message']; ?>");
  }else{
-  alertify.error("<?= $_SESSION['status']; ?>");
+  alertify.error("<?= $_SESSION['message']; ?>");
  }
 
   <?php

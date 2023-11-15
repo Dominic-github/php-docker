@@ -6,7 +6,7 @@ include('../../functions/myfunctions.php');
 
 if(isset($_POST['add-product'])){
 
-  $product_name=$_POST['product_name'];
+  $product_name = $_POST['product_name'];
   $desc=$_POST['desc'];
   $price=$_POST['price'];
   $quantity=$_POST['quantity'];
@@ -67,7 +67,7 @@ if(isset($_POST['change-product'])){
 if(isset($_POST['add-user'])){
 
   $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $fullname=mysqli_real_escape_string($conn, $_POST['fullname']);
+  $full_name=mysqli_real_escape_string($conn, $_POST['fullname']);
   $password=mysqli_real_escape_string($conn, $_POST['password']);
   $confirm_password=mysqli_real_escape_string($conn, $_POST['confirm_password']);
   $email=mysqli_real_escape_string($conn, $_POST['email']);
@@ -76,7 +76,7 @@ if(isset($_POST['add-user'])){
   $role_id;
 
    //Kiểm tra đã nhập đủ tên đăng nhập với mật khẩu chưa
-  if (!$username || !$password || !$fullname || !$email || !$confirm_password || !$role) {
+  if (!$username || !$password || !$full_name || !$email || !$confirm_password || !$role) {
     redirect("../add-user.php", "Enter complate information","warning");
   }
   $role_id = $role == "Admin" ? 1 : 2;
@@ -100,7 +100,7 @@ if(isset($_POST['add-user'])){
   }
 
   $password = md5($password);
-  $query = "INSERT into Users(username, password, full_name, email, role_id) VALUES ('$username', '$password', '$fullname', '$email', 2)";
+  $query = "INSERT into Users(username, password, full_name, email, role_id) VALUES ('$username', '$password', '$full_name', '$email', 2)";
   if(mysqli_query($conn,$query)){
 
     redirect("../add-user.php", "Add User is Successfully","success");
@@ -114,7 +114,7 @@ if(isset($_POST['add-user'])){
 if(isset($_POST['change-user'])){
 
   $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $fullname=mysqli_real_escape_string($conn, $_POST['fullname']);
+  $full_name=mysqli_real_escape_string($conn, $_POST['fullname']);
   $password=mysqli_real_escape_string($conn, $_POST['password']);
   $confirm_password=mysqli_real_escape_string($conn, $_POST['confirm_password']);
   $email=mysqli_real_escape_string($conn, $_POST['email']);
@@ -123,11 +123,10 @@ if(isset($_POST['change-user'])){
   $role_id;
 
    //Kiểm tra đã nhập đủ tên đăng nhập với mật khẩu chưa
-  if (!$username || !$password || !$fullname || !$email || !$confirm_password || !$role) {
+  if (!$username || !$password || !$full_name || !$email || !$confirm_password || !$role) {
     redirect("../user-list.php", "Enter complate information","warning");
   }
   $role_id = $role == "Admin" ? 1 : 2;
-
   
   //Kiểm tra mật khẩu
   if($password != $confirm_password){
@@ -170,12 +169,12 @@ if(isset($_POST['add-user-csv'])){
           while (($getData = fgetcsv($file)) !== FALSE)
            {
             $username  = $getData[0];
-            $fullname = $getData[1];
+            $full_name = $getData[1];
             $email = $getData[2];
             $password = md5($getData[3]);
             $role_id = $getData[4];
 
-  $query = "INSERT into Users(username, password, full_name, email, role_id) VALUES ('$username', '$password', '$fullname', '$email', $role_id)";
+  $query = "INSERT into Users(username, password, full_name, email, role_id) VALUES ('$username', '$password', '$full_name', '$email', $role_id)";
 
           mysqli_query($conn,$query);
            }
@@ -190,7 +189,7 @@ if(isset($_POST['add-user-csv'])){
     $filename = "users_" . date('Y-m-d') . ".csv"; 
     $delimiter = ","; 
     $f = fopen('php://memory', 'w'); 
-    $fields = array('ID', 'Username', 'Passowrd', 'Fullname', 'Email', 'RoleID'); 
+    $fields = array('ID', 'Username', 'Passowrd', 'FullName', 'Email', 'RoleID'); 
 
     fputcsv($f, $fields, $delimiter); 
 

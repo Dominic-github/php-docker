@@ -1,6 +1,5 @@
 <?php
-ob_start();
-include('includes/header.php');
+session_start();
 include('../middleware/adminMiddleware.php');
 
 include_once('../config/connectDB.php');
@@ -13,6 +12,7 @@ if(isset($_POST['search'])){
   $query = mysqli_query($conn,"SELECT *  FROM Customers");
 }
 
+include('includes/header.php');
 ?>
 
 <div class="container">

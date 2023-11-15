@@ -1,9 +1,8 @@
 <?php
-ob_start();
-include('includes/header.php');
+session_start();
 include('../middleware/adminMiddleware.php');
+include('../config/connectDB.php');
 
-include_once('../config/connectDB.php');
 if(isset($_POST['search'])){
   $value = $_POST['text_search'];
   $string = "SELECT *  FROM Users WHERE user_id like '%$value%' OR username Like '%$value%' ";
@@ -12,6 +11,7 @@ if(isset($_POST['search'])){
   $query = mysqli_query($conn,"SELECT *  FROM Users");
 }
 
+include('includes/header.php');
 ?>
 
 <div class="container">
@@ -153,7 +153,6 @@ if(isset($_POST['search'])){
               
               <?php } ?>
               <tr>
-                <td></td>
               </tr>
             </tbody>
           </thead>
